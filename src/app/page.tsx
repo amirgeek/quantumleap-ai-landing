@@ -182,13 +182,13 @@ export default function Home() {
 
       {/* New Contact Form Section */}
       <section
-        className="py-20 px-4 md:px-8 bg-zinc-900 text-center border-t border-gray-900"
+        className="py-20 px-4 md:px-8 bg-zinc-950 text-center border-t border-gray-900" // Changed to bg-zinc-950
       >
         <div className="max-w-xl mx-auto">
           <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold mb-8 text-gradient-neon bg-gradient-to-r from-bright-green to-cyan-electric drop-shadow-neon`}>
             Connect for a Quantum Leap
           </h2>
-          <p className="text-lg md:text-xl text-white mb-12 leading-relaxed">
+          <p className="text-lg md:text-xl text-white mb-12 leading-relaxed"> 
             Ready to explore how AI-driven operations can revolutionize your business? Fill out the form below.
           </p>
           <form className="w-full max-w-lg mx-auto text-left space-y-6">
@@ -198,7 +198,7 @@ export default function Home() {
                 type="text"
                 id="name"
                 name="name"
-                className="shadow appearance-none border border-cyan-electric/50 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric"
+                className="shadow appearance-none border border-zinc-700 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric placeholder-gray-400" // Added border-zinc-700 and placeholder-gray-400
                 placeholder="Your Name"
               />
             </div>
@@ -208,7 +208,7 @@ export default function Home() {
                 type="email"
                 id="email"
                 name="email"
-                className="shadow appearance-none border border-cyan-electric/50 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric"
+                className="shadow appearance-none border border-zinc-700 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric placeholder-gray-400"
                 placeholder="your@email.com"
               />
             </div>
@@ -218,7 +218,7 @@ export default function Home() {
                 id="businessNeed"
                 name="businessNeed"
                 rows={5}
-                className="shadow appearance-none border border-cyan-electric/50 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric"
+                className="shadow appearance-none border border-zinc-700 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric placeholder-gray-400"
                 placeholder="Describe your operational challenges or project goals..."
               ></textarea>
             </div>
@@ -226,7 +226,7 @@ export default function Home() {
               type="submit"
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0, 255, 255, 0.6)", y: -5 }} // Brighter glow on hover
               whileTap={{ scale: 0.95 }}
-              className="w-full px-12 py-4 bg-gradient-to-r from-cyan-electric to-bright-green text-black text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-70 relative overflow-hidden group"
+              className="w-full px-12 py-4 bg-cyan-400 text-black text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-70 relative overflow-hidden group" // Changed to bg-cyan-400 text-black
             >
               <span className="relative z-10">Send Inquiry</span>
               <span className="absolute inset-0 bg-gradient-to-r from-cyan-electric to-bright-green opacity-0 group-hover:opacity-40 transition-opacity duration-300 animate-glitch-effect"></span>
