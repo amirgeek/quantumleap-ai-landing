@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaBrain, FaRocket, FaGraduationCap, FaChalkboardTeacher, FaLightbulb, FaTools, FaLaptopCode, FaCloud, FaChartBar, FaBullhorn } from "react-icons/fa"; // Added more specific icons
+import { FaBrain, FaRocket, FaGraduationCap, FaChalkboardTeacher, FaLightbulb, FaTools, FaLaptopCode, FaCloud, FaChartBar, FaBullhorn, FaArrowDown, FaGlobe } from "react-icons/fa";
 
 const features = [
   {
@@ -37,12 +37,12 @@ const features = [
   },
 ];
 
-const fadeIn = {
+const fadeInVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-const staggerContainer = {
+const staggerVariants = {
   hidden: { opacity: 1 },
   visible: {
     opacity: 1,
@@ -57,26 +57,27 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-blue-950 to-purple-950 text-gray-50 antialiased overflow-x-hidden">
       {/* Hero Section */}
       <motion.section
-        variants={fadeIn}
+        variants={fadeInVariants}
         initial="hidden"
         animate="visible"
-        className="relative h-screen flex flex-col items-center justify-center text-center px-4 md:px-8 overflow-hidden"
+        className="relative h-screen flex flex-col items-center justify-center text-center px-4 md:px-8 overflow-hidden border-b border-gray-800"
       >
         <div className="absolute inset-0 z-0 opacity-15 animate-pulse-slow">
           <Image
-            src="/hero-bg.svg" // Placeholder for a futuristic background SVG/image
+            src="/hero-bg.svg"
             alt="Abstract AI background"
             layout="fill"
             objectFit="cover"
             className="z-0"
           />
         </div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-gray-950/80 via-transparent to-gray-950/80"></div>
 
         <div className="relative z-10 max-w-5xl mx-auto py-16 md:py-24">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+            transition={{ delay: 0.2, duration: 0.8, ease: "easeOut", type: "spring" }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 leading-tight drop-shadow-lg"
           >
             QuantumLeap AI
@@ -93,13 +94,21 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.8, type: "spring", stiffness: 100, damping: 10 }}
-            whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(74, 144, 226, 0.4)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(74, 144, 226, 0.4)", y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-700 text-white text-lg font-bold rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
+            className="px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-700 text-white text-xl font-bold rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
           >
             Start Your Quantum Leap
           </motion.button>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
+          className="absolute bottom-10 z-10 text-blue-400"
+        >
+          <FaArrowDown className="text-3xl animate-bounce" />
+        </motion.div>
       </motion.section>
 
       {/* Features Section */}
@@ -108,7 +117,7 @@ export default function Home() {
           Why QuantumLeap AI?
         </h2>
         <motion.div
-          variants={staggerContainer}
+          variants={staggerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -117,26 +126,59 @@ export default function Home() {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              variants={fadeIn}
+              variants={fadeInVariants}
               whileHover={{ y: -10, boxShadow: "0 15px 30px rgba(74, 144, 226, 0.3)", transition: { duration: 0.3 } }}
               className="bg-gray-800/60 backdrop-filter backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
               <feature.icon className="text-6xl text-blue-400 mb-6 relative z-10" />
               <h3 className="text-3xl font-bold mb-4 text-gray-100 relative z-10">{feature.title}</h3>
-              <p className="text-lg text-gray-300 leading-relaxed relative z-10">{feature.description}</p> {/* Corrected line 127 */} 
+              <p className="text-lg text-gray-300 leading-relaxed relative z-10">{feature.description}</p>
             </motion.div>
           ))}
         </motion.div>
       </section>
 
+      {/* Data Visualization / Globe Section */}
+      <section className="py-20 px-4 md:px-8 bg-gradient-to-r from-gray-950 to-blue-900/20">
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-500 drop-shadow-lg">
+          Global Reach, Local Impact
+        </h2>
+        <div className="max-w-4xl mx-auto text-center relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="w-64 h-64 md:w-80 md:h-80 mx-auto mb-10 relative"
+          >
+            <Image
+              src="/globe.svg"
+              alt="Animated Globe"
+              layout="fill"
+              objectFit="contain"
+              className="animate-spin-slow opacity-80"
+            />
+          </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-xl text-gray-300 leading-relaxed"
+          >
+            Our AI-powered platform connects learners and experts worldwide, fostering a global community of innovation and skill development. Explore diverse learning paths and collaborate with a network that spans continents.
+          </motion.p>
+        </div>
+      </section>
+
       {/* Call to Action Section */}
       <motion.section
-        variants={fadeIn}
+        variants={fadeInVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="py-20 px-4 md:px-8 bg-gradient-to-tl from-gray-950 to-blue-900/40 text-center"
+        className="py-20 px-4 md:px-8 bg-gradient-to-tl from-gray-950 to-blue-900/40 text-center border-t border-gray-800"
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-cyan-500 drop-shadow-lg">
@@ -146,7 +188,7 @@ export default function Home() {
             Join thousands of professionals already accelerating their growth with QuantumLeap AI. Sign up today and experience learning re-imagined.
           </p>
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(74, 222, 128, 0.4)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(74, 222, 128, 0.4)", y: -5 }}
             whileTap={{ scale: 0.95 }}
             className="px-12 py-5 bg-gradient-to-r from-green-500 to-cyan-600 text-white text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-70"
           >
