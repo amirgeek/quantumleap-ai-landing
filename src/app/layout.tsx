@@ -5,14 +5,14 @@ import "../styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "QuantumLeap AI - Personalized Learning Platform",
-  description: "QuantumLeap AI: AI-powered platform for personalized learning paths, professional development, and skill mastery.",
+  title: "QuantumLeap AI - AI-Driven Operations Suite",
+  description: "QuantumLeap AI: Pioneering AI-driven operational suites for the experience economy and high-frequency trading.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-gray-950 text-gray-50 antialiased`}>
+      <body className={`${inter.className} bg-black text-gray-50 antialiased`}>
         {children}
       </body>
     </html>
