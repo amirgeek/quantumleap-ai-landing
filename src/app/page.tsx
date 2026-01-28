@@ -186,13 +186,13 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="py-20 px-4 md:px-8 bg-gradient-to-tl from-black to-almost-black text-center border-t border-gray-900"
+        className="py-20 px-4 md:px-8 bg-gradient-to-tl from-gray-950 to-black text-center border-t border-gray-900" // Adjusted background to be slightly lighter
       >
         <div className="max-w-4xl mx-auto">
           <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold mb-8 text-gradient-neon bg-gradient-to-r from-bright-green to-cyan-electric drop-shadow-neon`}>
             Ready for Your Next Quantum Leap?
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed">
+          <p className="text-lg md:text-xl text-white mb-12 leading-relaxed"> {/* Changed to text-white */} 
             Connect with us to explore how AI-driven operations can revolutionize your business.
           </p>
           <motion.button
