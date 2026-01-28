@@ -79,7 +79,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut", type: "spring" }}
-            className={`${spaceGrotesk.className} text-7xl sm:text-8xl lg:text-9xl font-extrabold mb-4 text-gradient-neon bg-gradient-to-r from-cyan-electric to-fuchsia-500 leading-tight drop-shadow-neon`}
+            className={`${spaceGrotesk.className} text-7xl sm:text-8xl lg:text-9xl font-extrabold mb-4 text-gradient-neon bg-gradient-to-r from-cyan-electric to-vibrant-purple leading-tight drop-shadow-neon`}
           >
             QuantumLeap AI
           </motion.h1>
@@ -97,10 +97,10 @@ export default function Home() {
             transition={{ delay: 0.6, duration: 0.8, type: "spring", stiffness: 100, damping: 10 }}
             whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(0, 255, 255, 0.4)", y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="px-12 py-5 bg-gradient-to-r from-cyan-electric to-deep-purple text-black text-xl font-bold rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-50 relative overflow-hidden group"
+            className="px-12 py-5 bg-gradient-to-r from-cyan-electric to-vibrant-purple text-black text-xl font-bold rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-50 relative overflow-hidden group"
           >
             <span className="relative z-10">Explore Solutions</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-cyan-electric to-deep-purple opacity-0 group-hover:opacity-30 transition-opacity duration-300 animate-glitch-effect"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-cyan-electric to-vibrant-purple opacity-0 group-hover:opacity-30 transition-opacity duration-300 animate-glitch-effect"></span>
           </motion.button>
         </div>
         <motion.div
@@ -115,7 +115,7 @@ export default function Home() {
 
       {/* Features Section (Bento Grid with Neon Glass) */}
       <section className="py-20 px-4 md:px-8 bg-black">
-        <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold text-center mb-16 text-gradient-neon bg-gradient-to-r from-cyan-electric to-green-electric drop-shadow-neon`}>
+        <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold text-center mb-16 text-gradient-neon bg-gradient-to-r from-cyan-electric to-bright-green drop-shadow-neon`}>
           Our Core Capabilities
         </h2>
         <motion.div
@@ -130,9 +130,9 @@ export default function Home() {
               key={index}
               variants={fadeInVariants}
               whileHover={{ y: -5, boxShadow: "0 0 30px rgba(0,255,255,0.6), 0 0 60px rgba(128,0,128,0.4)", transition: { duration: 0.3 } }}
-              className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl shadow-xl border border-transparent bg-gradient-to-br from-cyan-electric/50 to-deep-purple/50 transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden group hover:ring-2 hover:ring-cyan-electric shadow-neon-glow"
+              className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl shadow-xl border border-transparent bg-gradient-to-br from-cyan-electric/50 to-vibrant-purple/50 transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden group hover:ring-2 hover:ring-cyan-electric shadow-neon-glow"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-electric/10 to-deep-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-electric/10 to-vibrant-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
               <feature.icon className="text-6xl text-cyan-electric mb-6 relative z-10" />
               <h3 className="text-3xl font-bold mb-4 text-gray-100 relative z-10">{feature.title}</h3>
               <p className="text-lg text-gray-300 leading-relaxed relative z-10">{feature.description}</p>
@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* Global Impact Section (Enhanced) */}
       <section className="py-20 px-4 md:px-8 bg-black border-t border-gray-900">
-        <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold text-center mb-16 text-gradient-neon bg-gradient-to-r from-deep-purple to-cyan-electric drop-shadow-neon`}>
+        <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold text-center mb-16 text-gradient-neon bg-gradient-to-r from-vibrant-purple to-cyan-electric drop-shadow-neon`}>
           Impact & Reach
         </h2>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -175,7 +175,7 @@ export default function Home() {
               objectFit="contain"
               className="animate-spin-slow opacity-80 z-10 drop-shadow-lg"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-electric/20 to-deep-purple/20 rounded-full blur-3xl opacity-50 animate-pulse-light"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-electric/20 to-vibrant-purple/20 rounded-full blur-3xl opacity-50 animate-pulse-light"></div>
           </motion.div>
         </div>
       </section>
@@ -189,7 +189,7 @@ export default function Home() {
         className="py-20 px-4 md:px-8 bg-gradient-to-tl from-black to-blue-900/20 text-center border-t border-gray-900"
       >
         <div className="max-w-4xl mx-auto">
-          <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold mb-8 text-gradient-neon bg-gradient-to-r from-green-400 to-cyan-electric drop-shadow-neon`}>
+          <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold mb-8 text-gradient-neon bg-gradient-to-r from-bright-green to-cyan-electric drop-shadow-neon`}>
             Ready for Your Next Quantum Leap?
           </h2>
           <p className="text-lg md:text-xl text-gray-200 mb-12 leading-relaxed">
@@ -198,10 +198,10 @@ export default function Home() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 255, 255, 0.4)", y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="px-12 py-5 bg-gradient-to-r from-cyan-electric to-green-electric text-black text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-70 relative overflow-hidden group"
+            className="px-12 py-5 bg-gradient-to-r from-cyan-electric to-bright-green text-black text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-70 relative overflow-hidden group"
           >
             <span className="relative z-10">Schedule a Consultation</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-cyan-electric to-green-electric opacity-0 group-hover:opacity-30 transition-opacity duration-300 animate-glitch-effect"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-cyan-electric to-bright-green opacity-0 group-hover:opacity-30 transition-opacity duration-300 animate-glitch-effect"></span>
           </motion.button>
         </div>
       </motion.section>
