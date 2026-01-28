@@ -182,7 +182,7 @@ export default function Home() {
 
       {/* New Contact Form Section */}
       <section
-        className="py-20 px-4 md:px-8 bg-zinc-950 text-center border-t border-gray-900" // Changed to bg-zinc-950
+        className="py-20 px-4 md:px-8 bg-zinc-950 text-center border-t border-gray-900" 
       >
         <div className="max-w-xl mx-auto">
           <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold mb-8 text-gradient-neon bg-gradient-to-r from-bright-green to-cyan-electric drop-shadow-neon`}>
@@ -193,32 +193,32 @@ export default function Home() {
           </p>
           <form className="w-full max-w-lg mx-auto text-left space-y-6">
             <div>
-              <label htmlFor="name" className="block text-gray-300 text-sm font-bold mb-2">Name</label>
+              <label htmlFor="name" className="block text-white text-sm font-bold mb-2">Name</label> {/* Changed label text to white */} 
               <input
                 type="text"
                 id="name"
                 name="name"
-                className="shadow appearance-none border border-zinc-700 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric placeholder-gray-400" // Added border-zinc-700 and placeholder-gray-400
+                className="shadow appearance-none border border-cyan-electric rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric placeholder-gray-400" // Changed border to border-cyan-electric 
                 placeholder="Your Name"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-gray-300 text-sm font-bold mb-2">Email</label>
+              <label htmlFor="email" className="block text-white text-sm font-bold mb-2">Email</label> {/* Changed label text to white */} 
               <input
                 type="email"
                 id="email"
                 name="email"
-                className="shadow appearance-none border border-zinc-700 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric placeholder-gray-400"
+                className="shadow appearance-none border border-cyan-electric rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric placeholder-gray-400" // Changed border to border-cyan-electric 
                 placeholder="your@email.com"
               />
             </div>
             <div>
-              <label htmlFor="businessNeed" className="block text-gray-300 text-sm font-bold mb-2">Business Need</label>
+              <label htmlFor="businessNeed" className="block text-white text-sm font-bold mb-2">Business Need</label> {/* Changed label text to white */} 
               <textarea
                 id="businessNeed"
                 name="businessNeed"
                 rows={5}
-                className="shadow appearance-none border border-zinc-700 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric placeholder-gray-400"
+                className="shadow appearance-none border border-cyan-electric rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric placeholder-gray-400" // Changed border to border-cyan-electric 
                 placeholder="Describe your operational challenges or project goals..."
               ></textarea>
             </div>
