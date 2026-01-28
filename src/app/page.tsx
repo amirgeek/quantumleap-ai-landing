@@ -2,7 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import { Terminal, Activity, Layers, Rocket, Brain, Handshake, Gem, TrendingUp, Cpu, Zap } from "lucide-react"; // Lucide React Icons
+import { Terminal, Activity, Layers, Rocket, Brain, Handshake, Gem, TrendingUp, Cpu, Zap, ArrowDown } from "lucide-react"; // Lucide React Icons
 
 const features = [
   {
@@ -102,7 +102,7 @@ export default function Home() {
           transition={{ delay: 1, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
           className="absolute bottom-10 z-10 text-cyan-400"
         >
-          <FaArrowDown className="text-3xl animate-bounce" /> {/* Keeping FaArrowDown for simple visual */} 
+          <ArrowDown className="text-3xl animate-bounce" /> {/* Changed to Lucide React ArrowDown */} 
         </motion.div>
       </motion.section>
 
