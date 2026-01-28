@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants type
 import Image from "next/image";
 import { FaBrain, FaRocket, FaGraduationCap, FaChalkboardTeacher, FaLightbulb, FaTools, FaLaptopCode, FaCloud, FaChartBar, FaBullhorn, FaArrowDown, FaGlobe } from "react-icons/fa";
 
@@ -40,7 +40,7 @@ const features = [
 const fadeInVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-};
+} as const;
 
 const staggerVariants = {
   hidden: { opacity: 1 },
@@ -50,7 +50,7 @@ const staggerVariants = {
       staggerChildren: 0.1,
     },
   },
-};
+} as const;
 
 export default function Home() {
   return (
