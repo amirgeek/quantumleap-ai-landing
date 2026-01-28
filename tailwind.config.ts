@@ -17,8 +17,9 @@ const config: Config = {
         'almost-black': '#0a0a0a',
         'cyan-electric': '#00ffff',
         'deep-purple': '#800080',
-        'vibrant-purple': '#a855f7', // Tailwind purple-500
-        'bright-green': '#00ff66', // A brighter green for better contrast
+        'vibrant-purple': '#a855f7',
+        'bright-green': '#00ff66',
+        'zinc-900': '#18181b', // Added zinc-900
       },
       boxShadow: {
         'neon': '0 0 15px rgba(0, 255, 255, 0.4), 0 0 30px rgba(0, 255, 255, 0.2)',

@@ -180,31 +180,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <motion.section
-        variants={fadeInVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        className="py-20 px-4 md:px-8 bg-almost-black text-center border-t border-gray-900" // Changed background to solid almost-black
+      {/* New Contact Form Section */}
+      <section
+        className="py-20 px-4 md:px-8 bg-zinc-900 text-center border-t border-gray-900"
       >
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-xl mx-auto">
           <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold mb-8 text-gradient-neon bg-gradient-to-r from-bright-green to-cyan-electric drop-shadow-neon`}>
-            Ready for Your Next Quantum Leap?
+            Connect for a Quantum Leap
           </h2>
-          <p className="text-lg md:text-xl text-white mb-12 leading-relaxed"> {/* Changed to text-white for visibility */} 
-            Connect with us to explore how AI-driven operations can revolutionize your business.
+          <p className="text-lg md:text-xl text-white mb-12 leading-relaxed">
+            Ready to explore how AI-driven operations can revolutionize your business? Fill out the form below.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(6,182,212,0.5)", y: -5 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-12 py-5 bg-gradient-to-r from-cyan-electric to-bright-green text-black text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-70 relative overflow-hidden group"
-          >
-            <span className="relative z-10">Schedule a Consultation</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-cyan-electric to-bright-green opacity-0 group-hover:opacity-30 transition-opacity duration-300 animate-glitch-effect"></span>
-          </motion.button>
+          <form className="w-full max-w-lg mx-auto text-left space-y-6">
+            <div>
+              <label htmlFor="name" className="block text-gray-300 text-sm font-bold mb-2">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="shadow appearance-none border border-cyan-electric/50 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric"
+                placeholder="Your Name"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-gray-300 text-sm font-bold mb-2">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="shadow appearance-none border border-cyan-electric/50 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric"
+                placeholder="your@email.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="businessNeed" className="block text-gray-300 text-sm font-bold mb-2">Business Need</label>
+              <textarea
+                id="businessNeed"
+                name="businessNeed"
+                rows={5}
+                className="shadow appearance-none border border-cyan-electric/50 rounded w-full py-3 px-4 bg-zinc-800 text-white leading-tight focus:outline-none focus:shadow-outline focus:border-cyan-electric"
+                placeholder="Describe your operational challenges or project goals..."
+              ></textarea>
+            </div>
+            <motion.button
+              type="submit"
+              whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(0, 255, 255, 0.6)", y: -5 }} // Brighter glow on hover
+              whileTap={{ scale: 0.95 }}
+              className="w-full px-12 py-4 bg-gradient-to-r from-cyan-electric to-bright-green text-black text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-70 relative overflow-hidden group"
+            >
+              <span className="relative z-10">Send Inquiry</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-cyan-electric to-bright-green opacity-0 group-hover:opacity-40 transition-opacity duration-300 animate-glitch-effect"></span>
+            </motion.button>
+          </form>
         </div>
-      </motion.section>
+      </section>
 
       {/* Footer */}
       <footer className="py-10 text-center text-gray-400 border-t border-gray-900">
