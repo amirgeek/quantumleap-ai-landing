@@ -7,7 +7,7 @@ import { Space_Grotesk } from "next/font/google"; // Import Space Grotesk
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["800"], // Only 800 for titles
+  weight: ["700"], // Corrected 800 to 700
   variable: "--font-space-grotesk",
 });
 
