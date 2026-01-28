@@ -95,7 +95,7 @@ export default function Home() {
             transition={{ delay: 0.6, duration: 0.8, type: "spring", stiffness: 100, damping: 10 }}
             whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(74, 144, 226, 0.4)" }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-700 text-white text-xl font-bold rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
+            className="px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-700 text-white text-lg font-bold rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
           >
             Start Your Quantum Leap
           </motion.button>
@@ -124,7 +124,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
               <feature.icon className="text-6xl text-blue-400 mb-6 relative z-10" />
               <h3 className="text-3xl font-bold mb-4 text-gray-100 relative z-10">{feature.title}</h3>
-              <p className="text-lg text-gray-300 leading-relaxed relative z-10">{feature.description || feature.Leverage}</p>
+              <p className="text-lg text-gray-300 leading-relaxed relative z-10">{feature.description}</p> {/* Corrected line 127 */} 
             </motion.div>
           ))}
         </motion.div>
