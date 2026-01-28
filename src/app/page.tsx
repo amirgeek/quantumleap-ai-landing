@@ -3,11 +3,11 @@
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { Terminal, Activity, Layers, Rocket, Brain, Handshake, Gem, TrendingUp, Cpu, Zap, ArrowDown } from "lucide-react";
-import { Space_Grotesk } from "next/font/google"; // Import Space Grotesk
+import { Space_Grotesk } from "next/font/google";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["700"], // Corrected 800 to 700
+  weight: ["700"],
   variable: "--font-space-grotesk",
 });
 
@@ -79,7 +79,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut", type: "spring" }}
-            className={`${spaceGrotesk.className} text-7xl sm:text-8xl lg:text-9xl font-extrabold mb-6 text-gradient-neon bg-gradient-to-r from-cyan-electric to-deep-purple leading-tight drop-shadow-neon`}
+            className={`${spaceGrotesk.className} text-7xl sm:text-8xl lg:text-9xl font-extrabold mb-4 text-gradient-neon bg-gradient-to-r from-cyan-electric to-deep-purple leading-tight drop-shadow-neon`}
           >
             QuantumLeap AI
           </motion.h1>
@@ -87,9 +87,9 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-            className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto"
+            className="text-2xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto"
           >
-            Orchestrating high-frequency operations and experience economies with quantum-speed AI.
+            Orchestrating high-frequency operations and experience economy with quantum-speed AI.
           </motion.p>
           <motion.button
             initial={{ opacity: 0, scale: 0.9 }}
