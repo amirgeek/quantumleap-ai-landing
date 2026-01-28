@@ -1,54 +1,38 @@
 
 @import "tailwindcss";
 
-/* Custom gradients and effects */
-.bg-gradient-hero {
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+/* Custom styles for Sci-Fi Premium Interface */
+
+/* Neural Network Background Pattern */
+.bg-neural-network-pattern {
+  background-image: radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 90% 80%, rgba(128, 0, 128, 0.08) 0%, transparent 50%),
+                    repeating-linear-gradient(0deg, rgba(0, 255, 255, 0.05) 0px, rgba(0, 255, 255, 0.05) 1px, transparent 1px, transparent 100px),
+                    repeating-linear-gradient(90deg, rgba(128, 0, 128, 0.05) 0px, rgba(128, 0, 128, 0.05) 1px, transparent 1px, transparent 100px);
+  background-size: 100% 100%, 100% 100%, 100px 100px, 100px 100px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  animation: neural-network-shift 60s linear infinite;
 }
 
-.backdrop-filter {
-  backdrop-filter: blur(10px) saturate(180%);
-  -webkit-backdrop-filter: blur(10px) saturate(180%);
+@keyframes neural-network-shift {
+  0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+  100% { background-position: 100px 100px, 100px 100px, 100px 100px, 100px 100px; }
 }
 
-@keyframes pulse-slow {
-  0%, 100% { opacity: 0.15; }
-  50% { opacity: 0.25; }
-}
-.animate-pulse-slow {
-  animation: pulse-slow 8s infinite ease-in-out;
+/* Glassmorphism Effect */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
 
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.animate-spin-slow {
-  animation: spin-slow 60s linear infinite;
+/* Neon Glow Effect for Hover */
+.shadow-neon-glow:hover {
+  box-shadow: 0 0 30px rgba(0,255,255,0.6), 0 0 60px rgba(128,0,128,0.4);
 }
 
-/* Cyber-Tech Background Gradient Shift */
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-.animate-gradient-shift {
-  background-size: 200% 200%;
-  animation: gradient-shift 15s ease infinite;
-}
-
-/* Subtle pulse for glow effects */
-@keyframes pulse-light {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 0.7; }
-}
-.animate-pulse-light {
-  animation: pulse-light 4s infinite ease-in-out;
-}
-
-/* Grid Pattern Background */
-.bg-grid-pattern {
-  background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
+/* Text Gradient for Titles */
+.text-gradient-neon {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }

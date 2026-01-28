@@ -1,8 +1,13 @@
 
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "../styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800"], // Include 800 for bold titles
+  variable: "--font-space-grotesk",
+});
 
 export const metadata = {
   title: "QuantumLeap AI - AI-Driven Operations Suite",
@@ -12,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-black text-gray-50 antialiased`}>
+      <body className={`${inter.className} ${spaceGrotesk.variable} bg-black text-gray-50 antialiased`}>
         {children}
       </body>
     </html>

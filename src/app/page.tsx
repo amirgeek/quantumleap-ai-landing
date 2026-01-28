@@ -2,7 +2,14 @@
 
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import { Terminal, Activity, Layers, Rocket, Brain, Handshake, Gem, TrendingUp, Cpu, Zap, ArrowDown } from "lucide-react"; // Lucide React Icons
+import { Terminal, Activity, Layers, Rocket, Brain, Handshake, Gem, TrendingUp, Cpu, Zap, ArrowDown } from "lucide-react";
+import { Space_Grotesk } from "next/font/google"; // Import Space Grotesk
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["800"], // Only 800 for titles
+  variable: "--font-space-grotesk",
+});
 
 const features = [
   {
@@ -54,26 +61,25 @@ const staggerVariants: Variants = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-gray-50 antialiased overflow-x-hidden relative">
-      {/* Background Gradient Effect */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-950 via-blue-900/10 to-purple-900/10 opacity-70 animate-gradient-shift"></div>
-      <div className="absolute inset-0 z-0 bg-grid-pattern opacity-5"></div>
+    <div className="min-h-screen bg-black text-gray-50 antialiased overflow-x-hidden relative font-sans">
+      {/* Dynamic Background */}
+      <div className="absolute inset-0 z-0 bg-neural-network-pattern opacity-30"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-almost-black via-blue-900/10 to-purple-900/10 opacity-70 animate-gradient-shift"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-black via-transparent to-black"></div>
 
       {/* Hero Section */}
       <motion.section
         variants={fadeInVariants}
         initial="hidden"
         animate="visible"
-        className="relative h-screen flex flex-col items-center justify-center text-center px-4 md:px-8 overflow-hidden border-b border-gray-800"
+        className="relative h-screen flex flex-col items-center justify-center text-center px-4 md:px-8 overflow-hidden border-b border-gray-900"
       >
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black via-transparent to-black"></div>
-
-        <div className="relative z-10 max-w-5xl mx-auto py-16 md:py-24">
+        <div className="relative z-10 max-w-6xl mx-auto py-16 md:py-24">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut", type: "spring" }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-green-500 to-emerald-500 leading-tight drop-shadow-lg"
+            className={`${spaceGrotesk.className} text-7xl sm:text-8xl lg:text-9xl font-extrabold mb-6 text-gradient-neon bg-gradient-to-r from-cyan-electric to-deep-purple leading-tight drop-shadow-neon`}
           >
             QuantumLeap AI
           </motion.h1>
@@ -81,34 +87,35 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-            className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto"
           >
-            Pioneering AI-driven operational suites for the experience economy and high-frequency trading.
+            Orchestrating high-frequency operations and experience economies with quantum-speed AI.
           </motion.p>
           <motion.button
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.8, type: "spring", stiffness: 100, damping: 10 }}
-            whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(0, 255, 0, 0.4)", y: -5 }}
+            whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(0, 255, 255, 0.4)", y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-gradient-to-r from-cyan-500 to-emerald-600 text-black text-xl font-bold rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500 focus:ring-opacity-50"
+            className="px-12 py-5 bg-gradient-to-r from-cyan-electric to-deep-purple text-black text-xl font-bold rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-50 relative overflow-hidden group"
           >
-            Explore Solutions
+            <span className="relative z-10">Explore Solutions</span>
+            <span className="absolute inset-0 bg-gradient-to-r from-cyan-electric to-deep-purple opacity-0 group-hover:opacity-30 transition-opacity duration-300 animate-glitch-effect"></span>
           </motion.button>
         </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
-          className="absolute bottom-10 z-10 text-cyan-400"
+          className="absolute bottom-10 z-10 text-cyan-electric"
         >
-          <ArrowDown className="text-3xl animate-bounce" /> {/* Changed to Lucide React ArrowDown */} 
+          <ArrowDown className="text-4xl animate-bounce" />
         </motion.div>
       </motion.section>
 
-      {/* Features Section (Bento Grid) */}
-      <section className="py-20 px-4 md:px-8">
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-green-400 drop-shadow-lg">
+      {/* Features Section (Bento Grid with Neon Glass) */}
+      <section className="py-20 px-4 md:px-8 bg-black">
+        <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold text-center mb-16 text-gradient-neon bg-gradient-to-r from-cyan-electric to-green-electric drop-shadow-neon`}>
           Our Core Capabilities
         </h2>
         <motion.div
@@ -122,11 +129,11 @@ export default function Home() {
             <motion.div
               key={index}
               variants={fadeInVariants}
-              whileHover={{ y: -10, boxShadow: "0 15px 30px rgba(0, 255, 0, 0.3)", transition: { duration: 0.3 } }}
-              className="bg-gray-900/50 backdrop-filter backdrop-blur-md p-8 rounded-2xl shadow-xl border border-gray-700 hover:border-green-500 transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden group"
+              whileHover={{ y: -5, boxShadow: "0 0 30px rgba(0,255,255,0.6), 0 0 60px rgba(128,0,128,0.4)", transition: { duration: 0.3 } }}
+              className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl shadow-xl border border-transparent bg-gradient-to-br from-cyan-electric/50 to-deep-purple/50 transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden group hover:ring-2 hover:ring-cyan-electric shadow-neon-glow"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-green-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
-              <feature.icon className="text-6xl text-green-400 mb-6 relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-electric/10 to-deep-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
+              <feature.icon className="text-6xl text-cyan-electric mb-6 relative z-10" />
               <h3 className="text-3xl font-bold mb-4 text-gray-100 relative z-10">{feature.title}</h3>
               <p className="text-lg text-gray-300 leading-relaxed relative z-10">{feature.description}</p>
             </motion.div>
@@ -135,8 +142,8 @@ export default function Home() {
       </section>
 
       {/* Global Impact Section (Enhanced) */}
-      <section className="py-20 px-4 md:px-8 bg-black border-t border-gray-800">
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-500 drop-shadow-lg">
+      <section className="py-20 px-4 md:px-8 bg-black border-t border-gray-900">
+        <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold text-center mb-16 text-gradient-neon bg-gradient-to-r from-deep-purple to-cyan-electric drop-shadow-neon`}>
           Impact & Reach
         </h2>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -168,7 +175,7 @@ export default function Home() {
               objectFit="contain"
               className="animate-spin-slow opacity-80 z-10 drop-shadow-lg"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-green-500/20 rounded-full blur-3xl opacity-50 animate-pulse-light"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-electric/20 to-deep-purple/20 rounded-full blur-3xl opacity-50 animate-pulse-light"></div>
           </motion.div>
         </div>
       </section>
@@ -179,27 +186,28 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="py-20 px-4 md:px-8 bg-gradient-to-tl from-black to-blue-900/20 text-center border-t border-gray-800"
+        className="py-20 px-4 md:px-8 bg-gradient-to-tl from-black to-blue-900/20 text-center border-t border-gray-900"
       >
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-extrabold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-cyan-500 drop-shadow-lg">
+          <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold mb-8 text-gradient-neon bg-gradient-to-r from-green-400 to-cyan-electric drop-shadow-neon`}>
             Ready for Your Next Quantum Leap?
           </h2>
           <p className="text-lg md:text-xl text-gray-200 mb-12 leading-relaxed">
             Connect with us to explore how AI-driven operations can revolutionize your business.
           </p>
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 255, 0, 0.4)", y: -5 }}
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 255, 255, 0.4)", y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="px-12 py-5 bg-gradient-to-r from-green-500 to-cyan-600 text-black text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-70"
+            className="px-12 py-5 bg-gradient-to-r from-cyan-electric to-green-electric text-black text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-70 relative overflow-hidden group"
           >
-            Schedule a Consultation
+            <span className="relative z-10">Schedule a Consultation</span>
+            <span className="absolute inset-0 bg-gradient-to-r from-cyan-electric to-green-electric opacity-0 group-hover:opacity-30 transition-opacity duration-300 animate-glitch-effect"></span>
           </motion.button>
         </div>
       </motion.section>
 
       {/* Footer */}
-      <footer className="py-10 text-center text-gray-400 border-t border-gray-800">
+      <footer className="py-10 text-center text-gray-400 border-t border-gray-900">
         <p>&copy; {new Date().getFullYear()} QuantumLeap AI. All rights reserved.</p>
       </footer>
     </div>
