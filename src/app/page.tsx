@@ -186,7 +186,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="py-20 px-4 md:px-8 bg-gradient-to-tl from-black to-blue-900/20 text-center border-t border-gray-900"
+        className="py-20 px-4 md:px-8 bg-gradient-to-tl from-black to-almost-black text-center border-t border-gray-900"
       >
         <div className="max-w-4xl mx-auto">
           <h2 className={`${spaceGrotesk.className} text-5xl sm:text-6xl font-extrabold mb-8 text-gradient-neon bg-gradient-to-r from-bright-green to-cyan-electric drop-shadow-neon`}>
@@ -198,7 +198,7 @@ export default function Home() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(6,182,212,0.5)", y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="px-12 py-5 bg-cyan-500 text-black text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-70 relative overflow-hidden group"
+            className="px-12 py-5 bg-gradient-to-r from-cyan-electric to-bright-green text-black text-xl font-bold rounded-full shadow-lg transform transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-electric focus:ring-opacity-70 relative overflow-hidden group"
           >
             <span className="relative z-10">Schedule a Consultation</span>
             <span className="absolute inset-0 bg-gradient-to-r from-cyan-electric to-bright-green opacity-0 group-hover:opacity-30 transition-opacity duration-300 animate-glitch-effect"></span>
