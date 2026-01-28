@@ -79,7 +79,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8, ease: "easeOut", type: "spring" }}
-            className={`${spaceGrotesk.className} text-7xl sm:text-8xl lg:text-9xl font-extrabold mb-4 text-gradient-neon bg-gradient-to-r from-cyan-electric to-deep-purple leading-tight drop-shadow-neon`}
+            className={`${spaceGrotesk.className} text-7xl sm:text-8xl lg:text-9xl font-extrabold mb-4 text-gradient-neon bg-gradient-to-r from-cyan-electric to-fuchsia-500 leading-tight drop-shadow-neon`}
           >
             QuantumLeap AI
           </motion.h1>
