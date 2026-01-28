@@ -5,7 +5,7 @@ import "../styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "700", "800"], // Include 800 for bold titles
+  weight: ["400", "700"], // Corrected 800 to 700
   variable: "--font-space-grotesk",
 });
 
